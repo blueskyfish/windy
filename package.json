@@ -1,0 +1,23 @@
+{
+  "name": "@blueskyfish/windy",
+  "version": "0.0.1",
+  "description": "Standard CSS styles for hectic and windy development work.",
+  "author": {
+    "name": "Blueskyfish",
+    "email": "blueskyfish@blueskyfish.de"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blueskyfish/windy.git"
+  },
+  "scripts": {
+    "compile": "sass ./src/styles/windy.scss ./dist/windy.css"
+  },
+  "devDependencies": {
+    "sass": "^1.81.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

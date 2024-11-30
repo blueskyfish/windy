@@ -1,0 +1,8 @@
+@use "mixins" as m;
+
+///
+/// Root declarations
+///
+:root {
+  @include m.root-gap();
+}

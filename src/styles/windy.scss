@@ -1,0 +1,26 @@
+@use "mixins" as m;
+
+/*! Root */
+@use "root";
+
+/*! Padding */
+@include m.gap-for('p', 'padding');
+@include m.gap-for('pt', 'padding-top');
+@include m.gap-for('pb', 'padding-bottom');
+@include m.gap-for('py', 'padding-top' 'padding-bottom');
+@include m.gap-for('pl', 'padding-left');
+@include m.gap-for('ps', 'padding-left');
+@include m.gap-for('pr', 'padding-right');
+@include m.gap-for('pe', 'padding-right');
+@include m.gap-for('px', 'padding-left' 'padding-right');
+
+/*! Margin */
+@include m.gap-for('m', 'margin');
+@include m.gap-for('mt', 'margin-top');
+@include m.gap-for('mb', 'margin-bottom');
+@include m.gap-for('my', 'margin-top' 'margin-bottom');
+@include m.gap-for('ml', 'margin-left');
+@include m.gap-for('ms', 'margin-left');
+@include m.gap-for('mr', 'margin-right');
+@include m.gap-for('me', 'margin-right');
+@include m.gap-for('mx', 'margin-left' 'margin-right');
