@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Windy: Standard CSS styles for hectic and windy development work.</title>
+    <link rel="icon" href="favicon.ico" sizes="16x16">
+    <link rel="stylesheet" href="windy.css" type="text/css">
+    <style>
+        /* https://www.joshwcomeau.com/css/custom-css-reset/ */
+        /* 1. Use a more-intuitive box-sizing model */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        /* 2. Remove default margin */
+        * {
+            margin: 0;
+        }
+
+        body {
+            /* 3. Add accessible line-height */
+            line-height: 1.5;
+            /* 4. Improve text rendering */
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 5. Improve media defaults */
+        img, picture, video, canvas, svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        /* 6. Inherit fonts for form controls */
+        input, button, textarea, select {
+            font: inherit;
+        }
+
+        /* 7. Avoid text overflows */
+        p, h1, h2, h3, h4, h5, h6 {
+            overflow-wrap: break-word;
+        }
+
+        /* 8. Improve line wrapping */
+        p {
+            text-wrap: pretty;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            text-wrap: balance;
+        }
+
+        /*
+          9. Create a root stacking context
+        */
+        #root, #__next {
+            isolation: isolate;
+        }
+
+
+        /*
+         Own Style
+         */
+        nav {
+            background-color: black;
+            color: white;
+
+            img {
+                background: white;
+                border-radius: var(--wy-gap-1);
+            }
+        }
+    </style>
+</head>
+<body class="h-100 w-100 scroll-y">
+
+<div class="flex-col nowrap align-stretch content-stretch h-100">
+    <nav class="flex-min flex-row align-center nowrap">
+        <h1 class="flex-min flex-row align-center">
+            <img class="m-1" src="logo.svg" alt="Windy" width="32" height="32">
+            <span>Windy</span>
+        </h1>
+    </nav>
+    <main class="flex-max">
+        <p>Main</p>
+    </main>
+</div>
+
+</body>
+</html>

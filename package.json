@@ -12,7 +12,7 @@
     "url": "https://github.com/blueskyfish/windy.git"
   },
   "scripts": {
-    "compile": "sass ./src/styles/windy.scss ./dist/windy.css"
+    "compile": "sass ./src/styles/windy.scss ./docs/windy.css"
   },
   "devDependencies": {
     "sass": "^1.81.0"

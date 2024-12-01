@@ -1,0 +1,116 @@
+/*
+ * Layout styles
+ */
+@use "mixins" as m;
+
+/// Simple display flex with all default values
+/// - direction: row
+/// - wrap:      nowrap
+/// - content:   flex-start
+/// - align:     stretch
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex, .flex-col, .flex-row {
+  &.nowrap {
+    flex-wrap: nowrap;
+  }
+
+  &.align-center {
+    align-items: center;
+  }
+
+  &.align-end {
+    align-items: flex-end;
+  }
+
+  &.align-start {
+    align-items: flex-start;
+  }
+
+  &.align-stretch {
+    align-items: stretch;
+  }
+
+  &.align-baseline {
+    align-items: baseline;
+  }
+
+  &.justify-center {
+    justify-content: center;
+  }
+
+  &.justify-end {
+    justify-content: flex-end;
+  }
+
+  &.justify-start {
+    justify-content: flex-start;
+  }
+
+  &.justify-space-between {
+    justify-content: space-between;
+  }
+
+  &.justify-space-around {
+    justify-content: space-around;
+  }
+
+  &.justify-space-evenly {
+    justify-content: space-evenly;
+  }
+
+  &.content-start {
+    align-content: flex-start;
+  }
+
+  &.content-end {
+    align-content: flex-end;
+  }
+
+  &.content-stretch {
+    align-content: stretch;
+  }
+
+  &.content-center {
+    align-content: center;
+  }
+
+  &.content-between {
+    align-content: space-between;
+  }
+  &.content-around {
+    align-content: space-around;
+  }
+}
+
+
+@include m.gap-for('.flex-gap', 'gap');
+@include m.gap-for('.flex-row-gap', 'row-gap');
+@include m.gap-for('.flex-col-gap', 'column-gap');
+
+/// Element takes up the maximum space.
+.flex-max {
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+
+/// Element takes up the minimum space.
+.flex-min {
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: auto;
+}
+

@@ -3,16 +3,16 @@
 ///
 /// Writes the given style with the given attribute form **0** to **10**
 ///
-@mixin gap-for($style, $attrs) {
+@mixin gap-for($prefixStyle, $attrs) {
   @for $i from 0 through 10 {
     @if $i == 0 {
-      .#{var.$prefix}-#{$style}-0 {
+      #{$prefixStyle}-0 {
         @each $attr in $attrs {
           #{$attr}: 0;
         }
       }
     } @else {
-      .#{var.$prefix}-#{$style}-#{$i} {
+      #{$prefixStyle}-#{$i} {
         @each $attr in $attrs {
           #{$attr}: var.$gap * $i;
         }
