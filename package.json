@@ -1,6 +1,6 @@
 {
   "name": "@blueskyfish/windy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Standard CSS styles for hectic and windy development work.",
   "author": {
     "name": "Blueskyfish",
@@ -12,7 +12,8 @@
     "url": "https://github.com/blueskyfish/windy.git"
   },
   "scripts": {
-    "compile": "sass ./src/styles/windy.scss ./docs/windy.css"
+    "compile": "sass ./src/styles/windy.scss ./docs/windy.css",
+    "sass": "sass"
   },
   "devDependencies": {
     "sass": "^1.81.0"

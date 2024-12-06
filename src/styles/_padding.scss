@@ -2,14 +2,14 @@
  * Padding
  */
 
-@use "mixins" as m;
+@use "mixins";
 
-@include m.gap-for('.p', 'padding');
-@include m.gap-for('.pt', 'padding-top');
-@include m.gap-for('.pb', 'padding-bottom');
-@include m.gap-for('.py', 'padding-top' 'padding-bottom');
-@include m.gap-for('.pl', 'padding-left');
-@include m.gap-for('.ps', 'padding-left');
-@include m.gap-for('.pr', 'padding-right');
-@include m.gap-for('.pe', 'padding-right');
-@include m.gap-for('.px', 'padding-left' 'padding-right');
+@include mixins.gap-for('.p', 'padding');
+@include mixins.gap-for('.pt', 'padding-top');
+@include mixins.gap-for('.pb', 'padding-bottom');
+@include mixins.gap-for('.py', 'padding-top' 'padding-bottom');
+@include mixins.gap-for('.pl', 'padding-left');
+@include mixins.gap-for('.ps', 'padding-left');
+@include mixins.gap-for('.pr', 'padding-right');
+@include mixins.gap-for('.pe', 'padding-right');
+@include mixins.gap-for('.px', 'padding-left' 'padding-right');

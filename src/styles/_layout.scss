@@ -1,7 +1,7 @@
 /*
  * Layout styles
  */
-@use "mixins" as m;
+@use "mixins";
 
 /// Simple display flex with all default values
 /// - direction: row
@@ -96,9 +96,9 @@
 }
 
 
-@include m.gap-for('.flex-gap', 'gap');
-@include m.gap-for('.flex-row-gap', 'row-gap');
-@include m.gap-for('.flex-col-gap', 'column-gap');
+@include mixins.gap-for('.flex-gap', 'gap');
+@include mixins.gap-for('.flex-row-gap', 'row-gap');
+@include mixins.gap-for('.flex-col-gap', 'column-gap');
 
 /// Element takes up the maximum space.
 .flex-max {

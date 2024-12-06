@@ -48,9 +48,9 @@ applications.
 Wouldn't it be nice if this could be done using simple CSS classes?
 
 ```html
-<h1 class="wy-align-center wy-flex wy-flex-nowrap wy-flex-row">
-    <span class="icon wy-flex-shrink wy-me-2">...</span>
-    <span class="title wy-flex-grow wy-truncate">...</span>
+<h1 class="align-center flex-row nowrap">
+    <span class="flex-min me-2">...</span>
+    <span class="flex-max truncate">...</span>
 </h1>
 ```
 
@@ -65,7 +65,7 @@ TBD
 
 | Name    | Description                                          |
 |---------|------------------------------------------------------|
-| **wy**  | The CSS classes use the prefix **wy**.               |
+| **wy**  | The root variables use the prefix **wy**.            |
 | **gap** | The distances are counted in **0.25rem** increments. |
 
 

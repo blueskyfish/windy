@@ -1,14 +1,14 @@
 /*
  * Margin
  */
-@use "mixins" as m;
+@use "mixins";
 
-@include m.gap-for('.m', 'margin');
-@include m.gap-for('.mt', 'margin-top');
-@include m.gap-for('.mb', 'margin-bottom');
-@include m.gap-for('.my', 'margin-top' 'margin-bottom');
-@include m.gap-for('.ml', 'margin-left');
-@include m.gap-for('.ms', 'margin-left');
-@include m.gap-for('.mr', 'margin-right');
-@include m.gap-for('.me', 'margin-right');
-@include m.gap-for('.mx', 'margin-left' 'margin-right');
+@include mixins.gap-for('.m', 'margin');
+@include mixins.gap-for('.mt', 'margin-top');
+@include mixins.gap-for('.mb', 'margin-bottom');
+@include mixins.gap-for('.my', 'margin-top' 'margin-bottom');
+@include mixins.gap-for('.ml', 'margin-left');
+@include mixins.gap-for('.ms', 'margin-left');
+@include mixins.gap-for('.mr', 'margin-right');
+@include mixins.gap-for('.me', 'margin-right');
+@include mixins.gap-for('.mx', 'margin-left' 'margin-right');
