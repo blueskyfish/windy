@@ -27,6 +27,10 @@
     flex-wrap: nowrap;
   }
 
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
   &.align-center {
     align-items: center;
   }

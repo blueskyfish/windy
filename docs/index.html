@@ -1,42 +1,66 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Windy: Standard CSS styles for hectic and windy development work.</title>
-    <link rel="icon" href="favicon.ico" sizes="16x16">
-    <link rel="stylesheet" href="windy.css" type="text/css">
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Windy: Standard CSS styles for hectic and windy development work.</title>
+  <link rel="icon" href="favicon.ico" sizes="16x16">
+  <link rel="stylesheet" href="windy.css" type="text/css">
+  <style>
+    /*
+     Own Style
+     */
+    body {
+      font-family: Arial, "Helvetica Neue", sans-serif;
+    }
 
-        /*
-         Own Style
-         */
-        body {
-            font-family: Arial, "Helvetica Neue", sans-serif;
-        }
-        nav {
-            background-color: var(--wy-grey-900);
-            color: var(--wy-grey-50);
+    nav {
+      background-color: var(--wy-grey-900);
+      color: var(--wy-grey-50);
 
-            img {
-                background: var(--wy-grey-50);
-                border-radius: var(--wy-gap-1);
-            }
-        }
-    </style>
+      img {
+        background: var(--wy-grey-50);
+        border-radius: var(--wy-gap-1);
+      }
+    }
+
+    .card {
+      border: 1px solid var(--wy-grey-500);
+      border-radius: var(--wy-gap-1);
+      height: 15rem !important;
+      width: 15rem !important;
+      margin: var(--wy-gap-6);
+    }
+  </style>
 </head>
 <body class="h-100 w-100 scroll-y">
 
 <div class="flex-col nowrap align-stretch content-stretch h-100">
-    <nav class="flex-min flex-row align-center nowrap">
-        <h1 class="flex-min flex-row align-center">
-            <img class="my-1 mx-2" src="logo.svg" alt="Windy" width="32" height="32">
-            <span>Windy</span>
-        </h1>
-    </nav>
-    <main class="flex-max">
-        <p class="p-3">🚧 Project is under construction</p>
-    </main>
+  <nav class="flex-min flex-row align-center nowrap">
+    <h1 class="flex-min flex-row align-center">
+      <img class="my-1 mx-2" src="logo.svg" alt="Windy" width="32" height="32">
+      <span>Windy</span>
+    </h1>
+  </nav>
+  <main class="flex-max">
+    <p class="p-3">🚧 Project is under construction</p>
+
+    <div class="p-3">
+      <h2>Elevation</h2>
+      <div class="p-3 flex wrap align-center justify-center">
+        <div class="card flex align-center justify-center elevation-1"><span>1</span></div>
+        <div class="card flex align-center justify-center elevation-2"><span>2</span></div>
+        <div class="card flex align-center justify-center elevation-3"><span>3</span></div>
+        <div class="card flex align-center justify-center elevation-4"><span>4</span></div>
+        <div class="card flex align-center justify-center elevation-5"><span>5</span></div>
+        <div class="card flex align-center justify-center elevation-6"><span>6</span></div>
+        <div class="card flex align-center justify-center elevation-7"><span>7</span></div>
+        <div class="card flex align-center justify-center elevation-8"><span>8</span></div>
+        <div class="card flex align-center justify-center elevation-9"><span>9</span></div>
+        <div class="card flex align-center justify-center elevation-10"><span>10</span></div>
+      </div>
+    </div>
+  </main>
 </div>
 
 </body>
