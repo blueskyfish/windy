@@ -11,7 +11,8 @@
      Own Style
      */
     body {
-      font-family: Arial, "Helvetica Neue", sans-serif;
+      font-family: var(--wy-font-family);
+      font-size: var(--wy-font-size);
     }
 
     nav {
@@ -35,6 +36,10 @@
       height: 14vw !important;
       width: 14vw !important;
     }
+
+    .postfix {
+      width: 4rem;
+    }
   </style>
 </head>
 <body class="h-100 w-100 scroll-y">
@@ -50,11 +55,45 @@
     <p class="p-3">🚧 Project is under construction</p>
 
     <div class="p-3">
-      <h2>Elevation</h2>
+      <h2 class="mb-2">Components / Button &amp; Link</h2>
+      <div class="content flex align-center mb-3">
+        <h3 class="postfix me-3">Blue</h3>
+        <button class="button blue me-2" type="button">
+          Button
+        </button>
+        <button class="button blue outline me-2" type="button">
+          Button
+        </button>
+        <button class="button blue me-2" type="button" disabled="true">
+          Button
+        </button>
+        <button class="button blue outline me-2" type="button" disabled="true">
+          Button
+        </button>
+      </div>
+      <div class="content flex align-center mb-3">
+        <h3 class="postfix me-3">Red</h3>
+        <button class="button red me-2" type="button">
+          Button
+        </button>
+        <button class="button red outline me-2" type="button">
+          Button
+        </button>
+        <button class="button red me-2" type="button" disabled="true">
+          Button
+        </button>
+        <button class="button red outline me-2" type="button" disabled="true">
+          Button
+        </button>
+      </div>
+    </div>
+
+    <div class="p-3">
+      <h2 class="mb-2">Elevation</h2>
       <div class="content mb-3">
         <p>Elevation from 0 to 24.</p>
       </div>
-      <div class="p-3 flex wrap align-center justify-center gap-6">
+      <div class="flex wrap align-center justify-center gap-6">
         <div class="card flex align-center justify-center elevation-1"><span>1</span></div>
         <div class="card flex align-center justify-center elevation-2"><span>2</span></div>
         <div class="card flex align-center justify-center elevation-3"><span>3</span></div>
