@@ -1,0 +1,6 @@
+/*
+ * Gab in Flex- and Grid-Box
+ */
+@use "mixins";
+
+@include mixins.gap-for('.gap', 'gap');
