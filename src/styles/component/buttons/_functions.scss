@@ -1,0 +1,67 @@
+@use "sass:color";
+@use "sass:map";
+@use "../../variables" as var;
+
+@function color-contrast($color) {
+  @return if(color.channel($color, "lightness", $space: hsl) < var.$contrast-threshold, var.$color-white, var.$color-back);
+}
+
+
+// Create the massive color map with the different colors
+// - bg: Background
+// - text: Color (Text Color)
+// States:
+// - normal: Normal color
+// - active: Button "active", "hover" & "focus"
+// - disabled: "disabled
+@function massive-color-map($color, $dark-scale: -20%, $light-scale: 50%) {
+  $darkColor: color.scale($color, $lightness: $dark-scale);
+  $lightColor: color.scale($color, $lightness: $light-scale);
+  @return (
+    bg: (
+      normal: $color,
+      active: $darkColor,
+      disabled: $lightColor,
+    ),
+    text: (
+      normal: color-contrast($color),
+      active: color-contrast($darkColor),
+      disabled: color-contrast($lightColor)
+    ),
+    border: (
+      normal: $color,
+      active: $darkColor,
+      disabled: $lightColor,
+    )
+  )
+}
+
+/**
+ * Create a map for outline color map
+ *
+ * @param $color the main color
+ * @param $light-scale (default 60%) the light scale from the main color
+ * @param $border-scale (default 80%) the border scale from the main color for disabled border
+ */
+@function outline-color-map($color, $light-scale: 60%, $border-scale: 80%, $outline-bg: var.$outline-color-bg, $outline-text: var.$outline-color-text) {
+  $lightColor: color.scale($color, $lightness: $light-scale);
+  $borderColor: color.scale($color, $lightness: $border-scale);
+  $darkColor: color.scale($color, $lightness: -20%);
+  @return (
+    bg: (
+      normal: var.$outline-color-bg,
+      active: $lightColor,
+      disabled: $outline-bg,
+    ),
+    text: (
+      normal: $darkColor,
+      active: color-contrast($lightColor),
+      disabled: $darkColor
+    ),
+    border: (
+      normal: $color,
+      active: $color,
+      disabled: $borderColor,
+    )
+  )
+}

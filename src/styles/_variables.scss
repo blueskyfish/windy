@@ -10,4 +10,24 @@ $prefix: wy !default;
 $gap: 0.25rem !default;
 
 // Colors
-$back: #000 !default;
+$color-back: #000 !default;
+$color-white: #fff !default;
+
+
+// Color Schema: "normal"
+// Primary
+$primary-color: #03A9F4 !default;
+// Secondary
+$secondary-color: #d0d0d0 !default;
+// Accent
+$accent-color: #CDDC39 !default;
+// Error
+$error-color: #EF5350 !default;
+// Warning
+$warning-color: #FDD835 !default;
+
+$outline-color-bg: #ffffff !default;
+$outline-color-text: #212121 !default;
+
+
+$contrast-threshold: 55% !default;

@@ -1,0 +1,80 @@
+/*
+ * Button & Link
+ */
+@use "mixins";
+@use "functions" as f;
+@use "../../variables" as var;
+
+.button, .btn {
+  @include mixins.root-button-base();
+  @include mixins.root-button(f.massive-color-map(var.$secondary-color));
+
+  border: var(--button-border-width) var(--button-border-style) var(--button-normal-border);
+  border-radius: var(--button-border-radius);
+
+  background: var(--button-normal-bg);
+  color: var(--button-normal-text);
+
+  cursor: pointer;
+
+  padding: var(--button-padding-y) var(--button-padding-x);
+
+  &:active {
+    background: var(--button-active-bg);
+    border-color: var(--button-active-border);
+    color: var(--button-active-text);
+  }
+
+  &:hover {
+    background: var(--button-hover-bg);
+    border-color: var(--button-hover-border);
+    color: var(--button-hover-text);
+  }
+
+  &:focus {
+    background: var(--button-focus-bg);
+    border-color: var(--button-focus-border);
+    color: var(--button-focus-text);
+  }
+
+  &[disabled="true"], &.disabled {
+    background: var(--button-disabled-bg);
+    border-color: var(--button-disabled-border);
+    color: var(--button-disabled-text);
+    cursor: not-allowed;
+  }
+
+  &.outline {
+    @include mixins.root-button(f.outline-color-map(var.$secondary-color));
+  }
+}
+
+.button, .btn {
+  &.primary {
+    @include mixins.root-button(f.massive-color-map(var.$primary-color));
+
+    &.outline {
+      @include mixins.root-button(f.outline-color-map(var.$primary-color));
+    }
+  }
+
+  &.accent {
+    @include mixins.root-button(f.massive-color-map(var.$accent-color));
+    &.outline {
+      @include mixins.root-button(f.outline-color-map(var.$accent-color))
+    }
+  }
+
+  &.error {
+    @include mixins.root-button(f.massive-color-map(var.$error-color));
+    &.outline {
+      @include mixins.root-button(f.outline-color-map(var.$error-color))
+    }
+  }
+  &.warning {
+    @include mixins.root-button(f.massive-color-map(var.$warning-color));
+    &.outline {
+      @include mixins.root-button(f.outline-color-map(var.$warning-color))
+    }
+  }
+}
