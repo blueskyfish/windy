@@ -24,9 +24,9 @@
 @mixin root-gap() {
   @for $i from 0 through 10 {
     @if $i == 0 {
-      --#{var.$prefix}-gap-0: 0;
+      --gap-0: 0;
     } @else {
-      --#{var.$prefix}-gap-#{$i}: #{var.$gap * $i};
+      --gap-#{$i}: #{var.$gap * $i};
     }
   }
 }
