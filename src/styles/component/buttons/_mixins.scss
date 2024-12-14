@@ -1,0 +1,37 @@
+@use "sass:map";
+@use "functions" as f;
+/**
+ * Add the css variables from button with give basic color map
+ */
+@mixin root-button($colorMap) {
+  $bgMap: map.get($colorMap, 'bg');
+  $textMap: map.get($colorMap, 'text');
+  $borderMap: map.get($colorMap, 'border');
+
+  --button-normal-bg: #{map.get($bgMap, 'normal')};
+  --button-normal-border: #{map.get($borderMap, 'normal')};
+  --button-normal-text: #{map.get($textMap, 'normal')};
+  --button-active-bg: #{map.get($bgMap, 'active')};
+  --button-active-border: #{map.get($borderMap, 'active')};
+  --button-active-text: #{map.get($textMap, 'active')};
+  --button-hover-bg: #{map.get($bgMap, 'active')};
+  --button-hover-border: #{map.get($borderMap, 'active')};
+  --button-hover-text: #{map.get($textMap, 'active')};
+  --button-focus-bg: #{map.get($bgMap, 'active')};
+  --button-focus-border: #{map.get($borderMap, 'active')};
+  --button-focus-text: #{map.get($textMap, 'active')};
+  --button-disabled-bg: #{map.get($bgMap, 'disabled')};
+  --button-disabled-border: #{map.get($borderMap, 'disabled')};
+  --button-disabled-text: #{map.get($textMap, 'disabled')};
+}
+
+/**
+ * Add the css variables from button styles.
+ */
+@mixin root-button-base($padding-x: 0.5rem, $padding-y: 0.25rem, $border-style: solid, $border-width: 1px, $border-radius: 0.25rem) {
+  --button-padding-x: #{$padding-x};
+  --button-padding-y: #{$padding-y};
+  --button-border-style: #{$border-style};
+  --button-border-width: #{$border-width};
+  --button-border-radius: #{$border-radius};
+}

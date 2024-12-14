@@ -2,13 +2,12 @@
  * Elevation from 0 to 24
  */
 @use "sass:color";
-@use "variables";
+@use "variables" as var;
 
-$shadowColor: variables.$back;
 
-$red: color.channel($shadowColor, "red", $space: rgb);
-$green: color.channel($shadowColor, "green", $space: rgb);
-$blue: color.channel($shadowColor, "blue", $space: rgb);
+$red: color.channel(var.$color-back, "red", $space: rgb);
+$green: color.channel(var.$color-back, "green", $space: rgb);
+$blue: color.channel(var.$color-back, "blue", $space: rgb);
 
 @function toShadow($alpha) {
   @return rgba($red, $green, $blue, $alpha);
