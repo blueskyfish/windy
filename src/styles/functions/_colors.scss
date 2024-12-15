@@ -1,6 +1,6 @@
 @use "sass:color";
 @use "sass:map";
-@use "../../variables" as var;
+@use "../variables" as var;
 
 @function color-contrast($color) {
   @return if(color.channel($color, "lightness", $space: hsl) < var.$contrast-threshold, var.$color-white, var.$color-back);

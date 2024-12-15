@@ -12,16 +12,13 @@
  */
 /*! Root */
 /*
- * Root declarations
+ * Root css variables
  */
 /**
  * Set the border on the css class for the given side with the given border values
  *
  * @param $color the color of the border
  * @param $side "all" means, set the border on all sides, otherwise on "top", "right", "bottom" and "left"
- */
-/**
- * The control css variables
  */
 /**
  * Create a map for outline color map
@@ -35,6 +32,12 @@
  */
 /**
  * Add the css variables from button styles.
+ */
+/**
+ * Add css variables from colors
+ */
+/**
+ * The control css variables
  */
 :root {
   --normal-font-family: Arial, "Helvetica Neue", sans-serif;

@@ -1,25 +1,15 @@
 /*
- * Root declarations
+ * Root css variables
  */
-
 @use "mixins";
 @use "variables" as var;
-@use "./component/buttons/mixins" as btn;
 
 :root {
   --normal-font-family: Arial, "Helvetica Neue", sans-serif;
   --normal-font-size: 16px;
 
-  --color-black: #{var.$color-back};
-  --color-white: #{var.$color-white};
-  --color-primary: #{var.$primary-color};
-  --color-secondary: #{var.$secondary-color};
-  --color-accent: #{var.$accent-color};
-  --color-error: #{var.$error-color};
-  --color-warning: #{var.$warning-color};
-  --color-divider: #{var.$divider-color};
-
+  @include mixins.root-colors();
   @include mixins.root-gap();
-  @include btn.root-button-base();
+  @include mixins.root-button-base();
   @include mixins.root-controls();
 }

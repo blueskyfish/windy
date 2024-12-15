@@ -1,0 +1,16 @@
+@use "../variables" as var;
+
+/**
+ * Add css variables from colors
+ */
+@mixin root-colors() {
+  --color-black: #{var.$color-back};
+  --color-white: #{var.$color-white};
+  --color-primary: #{var.$primary-color};
+  --color-secondary: #{var.$secondary-color};
+  --color-accent: #{var.$accent-color};
+  --color-error: #{var.$error-color};
+  --color-warning: #{var.$warning-color};
+  --color-divider: #{var.$divider-color};
+
+}

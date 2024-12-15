@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "functions" as f;
+@use "../functions/colors" as f;
 /**
  * Add the css variables from button with give basic color map
  */
