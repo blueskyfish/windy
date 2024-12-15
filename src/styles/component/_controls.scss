@@ -1,0 +1,27 @@
+@use "../mixins" as mixins;
+@use "../variables" as var;
+
+/**
+ * <div class="control">
+ *   <input class="input" type="text" id="user-name-control">
+ * </div>
+ */
+
+.control {
+  @include mixins.control-border-focus(var.$secondary-color);
+}
+
+.control {
+  &.primary {
+    @include mixins.control-border-focus(var.$primary-color);
+  }
+  &.accent {
+    @include mixins.control-border-focus(var.$accent-color);
+  }
+  &.error {
+    @include mixins.control-border-focus(var.$error-color);
+  }
+  &.warning {
+    @include mixins.control-border-focus(var.$warning-color);
+  }
+}

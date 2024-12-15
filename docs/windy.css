@@ -21,6 +21,9 @@
  * @param $side "all" means, set the border on all sides, otherwise on "top", "right", "bottom" and "left"
  */
 /**
+ * The control css variables
+ */
+/**
  * Create a map for outline color map
  *
  * @param $color the main color
@@ -60,6 +63,9 @@
   --button-border-style: solid;
   --button-border-width: 1px;
   --button-border-radius: 0.25rem;
+  --control-border-radius: var(--gap-1);
+  --control-padding-x: var(--gap-2);
+  --control-padding-y: var(--gap-1);
 }
 
 /* https://www.joshwcomeau.com/css/custom-css-reset/ *
@@ -1600,6 +1606,98 @@ body {
   --button-disabled-bg: #ffffff;
   --button-disabled-border: rgb(254.6, 247.2, 214.6);
   --button-disabled-text: rgb(242.4, 198, 2.4);
+}
+
+/**
+ * <div class="control">
+ *   <input class="input" type="text" id="user-name-control">
+ * </div>
+ */
+.control {
+  border: 1px solid #d0d0d0;
+  border-radius: var(--gap-1);
+}
+.control .input {
+  border-radius: var(--control-border-radius);
+  border: none;
+  padding: var(--control-padding-y) var(--control-padding-x);
+  width: 100%;
+}
+.control .input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.control:focus-within {
+  box-shadow: 0 0 8px rgba(208, 208, 208, 0.6);
+}
+
+.control.primary {
+  border: 1px solid #03A9F4;
+  border-radius: var(--gap-1);
+}
+.control.primary .input {
+  border-radius: var(--control-border-radius);
+  border: none;
+  padding: var(--control-padding-y) var(--control-padding-x);
+  width: 100%;
+}
+.control.primary .input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.control.primary:focus-within {
+  box-shadow: 0 0 8px rgba(3, 169, 244, 0.6);
+}
+.control.accent {
+  border: 1px solid #CDDC39;
+  border-radius: var(--gap-1);
+}
+.control.accent .input {
+  border-radius: var(--control-border-radius);
+  border: none;
+  padding: var(--control-padding-y) var(--control-padding-x);
+  width: 100%;
+}
+.control.accent .input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.control.accent:focus-within {
+  box-shadow: 0 0 8px rgba(205, 220, 57, 0.6);
+}
+.control.error {
+  border: 1px solid #EF5350;
+  border-radius: var(--gap-1);
+}
+.control.error .input {
+  border-radius: var(--control-border-radius);
+  border: none;
+  padding: var(--control-padding-y) var(--control-padding-x);
+  width: 100%;
+}
+.control.error .input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.control.error:focus-within {
+  box-shadow: 0 0 8px rgba(239, 83, 80, 0.6);
+}
+.control.warning {
+  border: 1px solid #FDD835;
+  border-radius: var(--gap-1);
+}
+.control.warning .input {
+  border-radius: var(--control-border-radius);
+  border: none;
+  padding: var(--control-padding-y) var(--control-padding-x);
+  width: 100%;
+}
+.control.warning .input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.control.warning:focus-within {
+  box-shadow: 0 0 8px rgba(253, 216, 53, 0.6);
 }
 
 /*# sourceMappingURL=windy.css.map */

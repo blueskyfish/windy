@@ -1,0 +1,5 @@
+@use "sass:color";
+
+@mixin box-shadow($color, $box-shadow-width: 0 0 8px, $box-shadow-alpha: 60%) {
+  box-shadow: $box-shadow-width rgba($color, $box-shadow-alpha);
+}
