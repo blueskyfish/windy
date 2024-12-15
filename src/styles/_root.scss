@@ -4,7 +4,7 @@
 
 @use "mixins";
 @use "variables" as var;
-@use "./component/buttons" as btn;
+@use "./component/buttons/mixins" as btn;
 
 :root {
   --normal-font-family: Arial, "Helvetica Neue", sans-serif;
@@ -17,8 +17,8 @@
   --color-accent: #{var.$accent-color};
   --color-error: #{var.$error-color};
   --color-warning: #{var.$warning-color};
+  --color-divider: #{var.$divider-color};
 
-  /*! Gap */
   @include mixins.root-gap();
   @include btn.root-button-base();
 }

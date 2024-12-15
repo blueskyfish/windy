@@ -31,10 +31,13 @@
     }
 
     .card {
-      border: 1px solid var(--color-secondary);
       border-radius: var(--gap-1);
       height: 14vw !important;
       width: 14vw !important;
+
+      &:hover {
+        background-color: #f2f2f2;
+      }
     }
 
     .postfix {
@@ -134,21 +137,32 @@
     </div>
 
     <div class="p-3">
+      <h2 class="mb-2">Borders</h2>
+      <div class="flex wrap align-center justify-center gap-6">
+        <div class="card border flex align-center justify-center"><span>Border</span></div>
+        <div class="card border-top flex align-center justify-center"><span>Border Top</span></div>
+        <div class="card border-right flex align-center justify-center"><span>Border Right</span></div>
+        <div class="card border-bottom flex align-center justify-center"><span>Border Bottom</span></div>
+        <div class="card border-left flex align-center justify-center"><span>Border Left</span></div>
+      </div>
+    </div>
+
+    <div class="p-3">
       <h2 class="mb-2">Elevation</h2>
       <div class="content mb-3">
         <p>Elevation from 0 to 24.</p>
       </div>
       <div class="flex wrap align-center justify-center gap-6">
-        <div class="card flex align-center justify-center elevation-1"><span>1</span></div>
-        <div class="card flex align-center justify-center elevation-2"><span>2</span></div>
-        <div class="card flex align-center justify-center elevation-3"><span>3</span></div>
-        <div class="card flex align-center justify-center elevation-4"><span>4</span></div>
-        <div class="card flex align-center justify-center elevation-5"><span>5</span></div>
-        <div class="card flex align-center justify-center elevation-6"><span>6</span></div>
-        <div class="card flex align-center justify-center elevation-7"><span>7</span></div>
-        <div class="card flex align-center justify-center elevation-8"><span>8</span></div>
-        <div class="card flex align-center justify-center elevation-9"><span>9</span></div>
-        <div class="card flex align-center justify-center elevation-10"><span>10</span></div>
+        <div class="card border flex align-center justify-center elevation-1"><span>1</span></div>
+        <div class="card border flex align-center justify-center elevation-2"><span>2</span></div>
+        <div class="card border flex align-center justify-center elevation-3"><span>3</span></div>
+        <div class="card border flex align-center justify-center elevation-4"><span>4</span></div>
+        <div class="card border flex align-center justify-center elevation-5"><span>5</span></div>
+        <div class="card border flex align-center justify-center elevation-6"><span>6</span></div>
+        <div class="card border flex align-center justify-center elevation-7"><span>7</span></div>
+        <div class="card border flex align-center justify-center elevation-8"><span>8</span></div>
+        <div class="card border flex align-center justify-center elevation-9"><span>9</span></div>
+        <div class="card border flex align-center justify-center elevation-10"><span>10</span></div>
       </div>
     </div>
   </main>
