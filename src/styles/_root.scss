@@ -21,4 +21,5 @@
 
   @include mixins.root-gap();
   @include btn.root-button-base();
+  @include mixins.root-controls();
 }

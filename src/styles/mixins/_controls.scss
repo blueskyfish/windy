@@ -1,0 +1,32 @@
+@use "box-shadow";
+
+@mixin control-border-focus($color, $width: 1px, $style: solid) {
+  border: $width $style $color;
+  border-radius: var(--gap-1);
+
+  .input {
+    border-radius: var(--control-border-radius);
+    border: none;
+    padding: var(--control-padding-y) var(--control-padding-x);
+
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  &:focus-within {
+    @include box-shadow.box-shadow($color);
+  }
+}
+
+/**
+ * The control css variables
+ */
+@mixin root-controls() {
+  --control-border-radius: var(--gap-1);
+  --control-padding-x: var(--gap-2);
+  --control-padding-y: var(--gap-1);
+}
