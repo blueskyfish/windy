@@ -1,8 +1,8 @@
 /*
  * Button & Link
  */
-@use "buttons/mixins";
-@use "buttons/functions" as f;
+@use "../mixins";
+@use "../functions" as f;
 @use "../variables" as var;
 
 .button, .btn {
