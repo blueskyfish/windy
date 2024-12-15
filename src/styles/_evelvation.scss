@@ -98,7 +98,7 @@ $blue: color.channel(var.$color-back, "blue", $space: rgb);
 }
 
 .elevation-21 {
-  box-shadow: 0 10px 13px -6px toShadow(0.2), 0 21px 33px 3px toShadow(0.14), 0 8px 40 7px toShadow(0.12);
+  box-shadow: 0 10px 13px -6px toShadow(0.2), 0 21px 33px 3px toShadow(0.14), 0 8px 40px 7px toShadow(0.12);
 }
 
 .elevation-22 {

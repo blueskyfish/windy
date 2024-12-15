@@ -1,9 +1,9 @@
 /*
  * Button & Link
  */
-@use "mixins";
-@use "functions" as f;
-@use "../../variables" as var;
+@use "buttons/mixins";
+@use "buttons/functions" as f;
+@use "../variables" as var;
 
 .button, .btn {
   @include mixins.root-button-base();
@@ -19,7 +19,7 @@
 
   padding: var(--button-padding-y) var(--button-padding-x);
 
-  &:active {
+  &:active, &.active {
     background: var(--button-active-bg);
     border-color: var(--button-active-border);
     color: var(--button-active-text);
@@ -31,7 +31,7 @@
     color: var(--button-hover-text);
   }
 
-  &:focus {
+  &:focus, .focus {
     background: var(--button-focus-bg);
     border-color: var(--button-focus-border);
     color: var(--button-focus-text);

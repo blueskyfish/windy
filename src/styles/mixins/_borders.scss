@@ -1,0 +1,22 @@
+
+/**
+ * Set the border on the css class for the given side with the given border values
+ *
+ * @param $color the color of the border
+ * @param $side "all" means, set the border on all sides, otherwise on "top", "right", "bottom" and "left"
+ */
+@mixin border($color, $side: all, $style: solid, $width: 1px) {
+  @if $side == all {
+    border: $style $width $color;
+  } @else if $side == top {
+    border-top: $style $width $color;
+  } @else if $side == bottom {
+    border-bottom: $style $width $color;
+  } @else if $side == left {
+    border-left: $style $width $color;
+  } @else if $side == right {
+    border-right: $style $width $color;
+  } @else {
+    @debug 'Unknown side ' $side
+  }
+}

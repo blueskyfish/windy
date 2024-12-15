@@ -1,0 +1,14 @@
+@use "./mixins";
+@use "./variables" as var;
+
+@each $side in (all top right bottom left) {
+  @if $side == all {
+    .border {
+      @include mixins.border(var.$divider-color, $side);
+    }
+  } @else {
+    .border-#{$side} {
+      @include mixins.border(var.$divider-color, $side)
+    }
+  }
+}
